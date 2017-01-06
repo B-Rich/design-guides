@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Circular';
+    src: url(//s3.amazonaws.com/icalia/assets/fonts/Circular.otf);
+    font-weight:400;
+}
+
+$primary-type: 'Inconsolata';
+$second-type: 'Circular';
+$icalia-red: #ED1F24;
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: $primary-type, monospace;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 5px 25px #eaeaea;
+  height: 75px;
+  width: 100%;
+
+  .navbar-title {
+    font-family: $second-type;
+  }
+
+  .navbar-logo {
+    display: inline-block;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  p {
+    color: $icalia-red;
+    display: inline-block;
+    margin: 12px 0;
+    vertical-align: bottom;
+  }
+}
+
+.intro {
+  padding: 50px;
+
+  &-title {
+    font-family: $second-type;
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+
+  &-subtitle {
+    color: $icalia-red;
+    font-family: $second-type;
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  &-text {
+  }
+}
+
+.design-card {
+  background-color: #fff;
+  box-shadow: 5px 5px 25px #eaeaea;
+  display: inline-block;
+  margin: 20px;
+  transition: all .2s ease-in;
+  width: 400px;
+  flex: 0 0 400px;
+
+  &__photo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &__info {
+    display: inline-block;
+    float: right;
+    padding: 1rem;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-size: 12px;
+    margin-bottom: 2rem;
+  }
+
+  &__category {
+    color: #8E8E8E;
+    font-family: 'Lora';
+    font-size: 10px;
+    font-style: italic;
+    transition: all .3s ease-in;
+
+    &:hover {
+      color: $icalia-red;
+    }
+  }
+}
+
+.design-card:hover {
+  box-shadow: 10px 10px 30px #d8d8d8;
+}
+
+footer {
+  background-color: #EBEBEB;
+  height: 150px;
+  margin-top: 150px;
+  padding: 20px 0;
+
+  .footer-website {
+    font-weight: 700;
+    transition: all .3s ease-in;
+
+    &:hover {
+      color: $icalia-red;
+    }
+  }
+
+  .signature {
+    margin-top: 10px;
+  }
+}
+
+.social-networks {
+  margin: 20px 0;
+
+  &__element {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}

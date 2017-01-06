@@ -1,2 +1,2 @@
-require './server.rb'
-run Sinatra::Application
+require 'middleman/rack'
+run Middleman.server

@@ -166,7 +166,7 @@ header {
 }
 
 .design-sprint:after {
-  background: linear-gradient(-90deg, #e6e390, #C3fafd);
+  background: linear-gradient(90deg, #e6e390, #C3fafd);
 }
 
 .cochi:after {
@@ -215,5 +215,11 @@ footer {
   &__element {
     display: inline-block;
     margin: 0 10px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .design-card {
+    flex: 0 0 400px;
   }
 }

@@ -1,0 +1,14 @@
+scss_files: 'source/stylesheets/*.scss'
+
+linters:
+  VendorPrefix:
+    exclude:
+      - 'scss/_mixins.scss'
+  ImportantRule:
+    exclude:
+      - 'scss/_mixins.scss'
+  BorderZero:
+    enabled: false
+  Indentation:
+    severity: warning
+    width: 2

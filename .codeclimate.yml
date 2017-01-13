@@ -1,0 +1,11 @@
+---
+engines:
+  scss-lint:
+    enabled: true
+  bundler-audit:
+    enabled: true
+ratings:
+  paths:
+    - "source/stylesheets/*.scss"
+exclude_paths:
+  - "config/"

@@ -9,3 +9,4 @@ ratings:
     - "source/stylesheets/*.scss"
 exclude_paths:
   - "config/"
+  - "/source/stylesheets/_reset.scss"

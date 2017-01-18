@@ -213,3 +213,9 @@ footer {
     margin: 0 10px;
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+  .design-card {
+    flex: 0 0 400px;
+  }
+}

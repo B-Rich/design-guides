@@ -1,22 +1,18 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 @font-face {
-    font-family: 'Circular';
-    src: url(//s3.amazonaws.com/icalia/assets/fonts/Circular.otf);
-    font-weight:400;
+  font-family: 'Circular';
+  src: url('//s3.amazonaws.com/icalia/assets/fonts/Circular.otf');
+  font-weight: 400;
 }
 
 $primary-type: 'Open Sans';
 $second-type: 'Circular';
 $icalia-red: #ed1f24;
 
-:root {
-    --red: red;
-}
-
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -88,7 +84,7 @@ header {
   transition: all .3s ease-out;
   width: 400px;
 
-  &:after {
+  &::after {
     background: #fff;
     bottom: 0;
     content: '';
@@ -96,10 +92,10 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
   }
 
-  &:hover:after {
+  &:hover::after {
     box-shadow: 10px 10px 30px #d8d8d8;
     opacity: 0;
     transition: all 0.5s ease;
@@ -149,44 +145,44 @@ header {
   background: linear-gradient(-90deg, #fbcbc4, #4c3c9a);
 }
 
-.project-life:after {
+.project-life::after {
   background: linear-gradient(45deg, #fff, #2d2a32);
 }
 
-.designer-profile:after {
+.designer-profile::after {
   background: linear-gradient(-45deg, #3dacff, #001045);
 }
 
-.ux-challenge:after {
+.ux-challenge::after {
   background: linear-gradient(90deg, #6fe5db, #8ab25e);
 }
 
-.intern:after {
+.intern::after {
   background: linear-gradient(45deg, #334160, #e5e5e5);
 }
 
-.design-sprint:after {
+.design-sprint::after {
   background: linear-gradient(-90deg, #e6e390, #C3fafd);
 }
 
-.cochi:after {
+.cochi::after {
   background: linear-gradient(45deg, #ea3f6b, #ffb0c5);
 }
 
-.printoo:after {
+.printoo::after {
   background: linear-gradient(45deg, #00b4c8, #9ddbe4);
 }
 
-.okudoc:after {
+.okudoc::after {
   background: linear-gradient(-90deg, #a351d4, #492260);
 }
 
-.aire:after {
+.aire::after {
   background: linear-gradient(-90deg, #06368b, #68efe2);
 }
 
-.tap-to-fund:after {
-  background: linear-gradient(90deg, #18781D, #2BC82B);
+.tap-to-fund::after {
+  background: linear-gradient(90deg, #18781d, #2bc82b);
 }
 
 footer {

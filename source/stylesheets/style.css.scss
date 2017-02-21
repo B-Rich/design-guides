@@ -7,7 +7,7 @@
 }
 
 $primary-type: 'Open Sans';
-$second-type: 'Circular';
+$second-type: 'Circular', 'Montserrat';
 $icalia-red: #ed1f24;
 
 * {
@@ -24,13 +24,14 @@ body {
 
 .container {
   margin: 0 auto;
+  max-width: 1280px;
   width: 80%;
 }
 
-header {
+.nav {
   background-color: #fff;
-  box-shadow: 0 5px 25px #eaeaea;
-  height: 75px;
+  border-bottom: 1px #dfdfdf;
+  height: 150px;
   width: 100%;
 
   .navbar-title {
@@ -49,6 +50,18 @@ header {
     margin: 12px 0;
     vertical-align: bottom;
   }
+
+  .navbar-social {
+    color: $icalia-red;
+    display: inline-block;
+    float: right;
+    margin: 12px 0;
+    vertical-align: bottom;
+
+    a {
+      margin-left: 2rem;
+    }
+  }
 }
 
 .intro {
@@ -56,7 +69,7 @@ header {
 
   &-title {
     font-family: $second-type;
-    font-size: 24px;
+    font-size: 48px;
     margin-bottom: 1rem;
   }
 
@@ -69,153 +82,72 @@ header {
 
   &-text {
     font-family: $primary-type;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 40px;
+    width: 350px;
   }
 }
 
-.design-card {
-  box-shadow: 5px 5px 25px #eaeaea;
-  display: inline-block;
-  flex: 0 0 500px;
-  height: 300px;
-  margin: 20px;
-  overflow: hidden;
-  position: relative;
-  transition: all .3s ease-out;
-  width: 400px;
+.article-card {
+  box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
+  -webkit-box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
+  background-color: #fff;
+  height: 475px;
+  padding-top: 1rem;
+  width: 350px;
 
-  &::after {
-    background: #fff;
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: all .5s ease;
-  }
-
-  &:hover::after {
-    box-shadow: 10px 10px 30px #d8d8d8;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-
-  &__photo {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-  }
-
-  &__info {
-    color: #fff;
-    display: inline-block;
+  &__top {
+    height: 50px;
     padding: 1rem;
-    position: absolute;
-    vertical-align: top;
-    width: 50%;
-    z-index: 1;
+  }
+
+  &__author-photo {
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  &__author-name {
+    color: #9b9b9b;
+    display: inline-block;
+    font-family: $second-type;
+    margin-left: 10px;
   }
 
   &__title {
     font-family: $second-type;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 2rem;
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  &__main-photo {
+    display: block;
+    height: 220px;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      width: 350px;
+    }
   }
 
   &__description {
+    color: #9b9b9b;
     font-size: 12px;
-    margin-bottom: 2rem;
-  }
-
-  &__category {
-    font-family: 'Lora';
-    font-size: 12px;
-    font-style: italic;
-    transition: all .3s ease-in;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    line-height: 20px;
+    padding: 1rem;
   }
 }
 
-.icalicons:after {
-  background: linear-gradient(-90deg, #fbcbc4, #4c3c9a);
-}
-
-.project-life::after {
-  background: linear-gradient(45deg, #fff, #2d2a32);
-}
-
-.designer-profile::after {
-  background: linear-gradient(-45deg, #3dacff, #001045);
-}
-
-.ux-challenge::after {
-  background: linear-gradient(90deg, #6fe5db, #8ab25e);
-}
-
-.intern::after {
-  background: linear-gradient(45deg, #334160, #e5e5e5);
-}
-
-.design-sprint::after {
-  background: linear-gradient(-90deg, #e6e390, #C3fafd);
-}
-
-.cochi::after {
-  background: linear-gradient(45deg, #ea3f6b, #ffb0c5);
-}
-
-.printoo::after {
-  background: linear-gradient(45deg, #00b4c8, #9ddbe4);
-}
-
-.okudoc::after {
-  background: linear-gradient(-90deg, #a351d4, #492260);
-}
-
-.aire::after {
-  background: linear-gradient(-90deg, #06368b, #68efe2);
-}
-
-.tap-to-fund::after {
-  background: linear-gradient(90deg, #18781d, #2bc82b);
-}
 
 footer {
-  background-color: #ebebeb;
-  height: 150px;
-  margin-top: 150px;
-  padding: 20px 0;
-
-  .footer-website {
-    font-weight: 700;
-    transition: all .3s ease-in;
-
-    &:hover {
-      color: $icalia-red;
-    }
-  }
-
-  .signature {
-    margin-top: 10px;
-  }
-}
-
-.social-networks {
-  margin: 20px 0;
-
-  &__element {
-    display: inline-block;
-    margin: 0 10px;
-  }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 500px) {
-  .design-card {
-    flex: 0 0 400px;
-  }
+  background-color: red;
+  margin-top: 100px;
+  height: 200px;
 }

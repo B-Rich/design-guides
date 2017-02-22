@@ -145,6 +145,61 @@ body {
   }
 }
 
+.event-card {
+  box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
+  -webkit-box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
+  background-color: #fff;
+  height: 475px;
+  width: 350px;
+
+  &__main-photo {
+    display: block;
+    height: 330px;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      height: 330px;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+    width: 130px;
+
+    &-day {
+      color: #9b9b9b;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &-number {
+      font-family: $second-type;
+      font-size: 36px;
+    }
+
+    &-month {
+      color: $icalia-red;
+    }
+  }
+
+  &__about {
+    display: inline-block;
+    height: 145px;
+    padding: 2rem;
+    position: absolute;
+    width: 220px;
+
+    &-title {
+      display: inline-block;
+      font-family: $second-type;
+      font-size: 20px;
+    }
+  }
+}
+
 
 footer {
   background-color: red;

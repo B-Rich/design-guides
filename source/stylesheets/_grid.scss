@@ -28,6 +28,7 @@
   @include grid-columns;
   @include grid-columns-offset;
   display: block;
+  margin-bottom: 3rem;
 
   [class*="col-"] {
     float: left;

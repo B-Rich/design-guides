@@ -31,7 +31,15 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 80%;
+  width: 90%;
+}
+
+.content {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav {
@@ -89,9 +97,9 @@ body {
 
   &-text {
     font-family: $primary-type;
-    font-size: 18px;
-    line-height: 40px;
-    width: 350px;
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 1024px;
   }
 }
 
@@ -101,7 +109,11 @@ body {
   background-color: #fff;
   height: 475px;
   padding-top: 1rem;
-  width: 350px;
+  width: 320px;
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+
 
   &__top {
     height: 50px;
@@ -157,7 +169,11 @@ body {
   -webkit-box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
   background-color: #fff;
   height: 475px;
-  width: 350px;
+  width: 320px;
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+
 
   &__main-photo {
     display: block;
@@ -210,13 +226,17 @@ body {
 .resources-card {
   box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
   -webkit-box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  background-image: linear-gradient(to right, #fccbc3 0%, #fdddd4 100%);
   height: 475px;
   padding: 1rem;
-  width: 350px;
+  width: 320px;
+  display: inline-block;
+  position: relative;
+  margin: 20px;
+
 
   &__title {
-    color: #fff;
+    color: #000;
     display: inline-block;
     font-family: $second-type;
     font-size: 20px;
@@ -237,42 +257,84 @@ body {
     width: 100%;
 
     &-icon {
-      height: 40px;
+      height: 150px;
     }
   }
 
   &__description {
-    color: #fff;
+    color: #000;
     font-size: 12px;
     line-height: 20px;
   }
 }
 
-.case-study-card {
-  box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
-  -webkit-box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
-  height: 475px;
-  width: 350px;
+.card-wrap  {
+  display: inline-block !important;
+}
 
-  &__photo {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.0)), url(../images/okudoc.png) center center no-repeat;
-    height: 375px;
-    width: 100%;
-  }
+.casestudy-card {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.0)), url(../images/okudoc.jpg) center center no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 30px rgba(133, 133, 133, .1);
+  height: 475px;
+  margin: 20px;
+  position: relative;
+  width: 320px;
 
   &__title {
     color: #fff;
-    display: inline-block;
     font-family: $second-type;
-    font-size: 20px;
+    font-size: 18px;
     padding: 1rem;
-    width: 250px;
+  }
+
+  &__content {
+    background: white;
+    bottom: 0;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+  }
+
+  &__description {
+    color: #9b9b9b;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 1rem;
   }
 }
 
 
 footer {
-  background-color: red;
-  margin-top: 100px;
-  height: 200px;
+  font-family: $second-type;
+  margin: 100px 0 100px 0;
+  text-align: center;
+
+  .footer-top {
+    height: 75px;
+    width: 100%;
+
+    .footer-line {
+      background: #dfdfdf;
+      height: 1px;
+      width: 35%;
+    }
+
+    .footer-logo {
+      height: 75px;
+    }
+  }
+
+  .footer-bottom {
+
+    a {
+      height: 30px;
+      font-weight: 100;
+      margin: 5px;
+    }
+
+    .footer-social-links {
+    }
+  }
 }

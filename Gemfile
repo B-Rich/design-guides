@@ -11,5 +11,8 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-compass', '>= 4.0.0'
-gem "therubyracer"
-gem "scss_lint", require: false
+gem 'middleman-sprockets', '~> 4.0.0.rc'
+gem 'therubyracer'
+gem 'puma'
+gem 'rack-contrib'
+gem 'scss_lint', require: false
